@@ -1,0 +1,270 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-box-font-smoothing: grayscale;
+}
+
+:root{
+  --color-base-blue100: #387E96;
+  --color-base-blue200: #065E7C;
+  --color-base-gray800: #202024;
+  --color-base-gray900: #121214;
+  --color-base-white: #FFFFFF;
+  --color-base-offwhite: #F4FCFF;
+  
+  font-size: 62,5%;
+}
+
+html, body, input{
+  font-family: 'Mulish', sans-serif;
+}
+
+body{
+  font-size: 16px;
+  background-color: var(--color-base-white);
+}
+
+#app{
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+  height: 100vh;
+}
+
+header{
+  display: flex;
+  justify-content: center;
+  gap:2.5rem;
+  padding: 2.8rem 1.2rem;
+
+  height: 4.8rem;
+  align-items: center;
+  background-color: #065E7C;
+}
+
+header .logomarca{
+  border-radius: 999rem;
+  background: #F4FCFF;
+  width: 4rem;
+  height: 4rem;
+  padding: .8rem;
+}
+
+.input-wrapper label{
+  width: .1rem;
+  height: .1rem;
+
+  overflow: hidden;
+  position: absolute;
+}
+
+.input-wrapper input{
+  width: 100%;
+  border: 0;
+  border-radius: .6rem;
+  
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: var(--color-base-white);
+  
+  background-color: var(--color-base-blue100); 
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.2rem 1.6rem 1.2rem 1.4rem;
+}
+
+.input-wrapper input::placeholder{
+  opacity: 0.56;
+  color: var(--color-base-gray500);
+  width: auto;
+}
+
+.avatar{
+  width: 4.2rem;
+  height: 4.2rem;
+  
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+header form{
+  flex: 1;
+}
+
+form :active{
+  background-color: var(--color-base-blue200);
+  transition: background-color 0.3s; 
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+
+main section img{
+  min-width: 100%;
+  border-radius: 5px;
+}
+
+main .title{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-base-white);
+  margin: 3.1rem auto 3.1rem 2.2rem;
+  
+}
+
+.title h1{
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+}
+
+.buttons button{
+  padding: 1.2rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.8rem;
+
+  border-style: none;
+  border-radius: 99rem;
+  background: var(--color-base-blue200);
+}
+
+button img{
+  min-height: 1.6rem;
+}
+
+.buttons{
+  display: flex;
+  gap: 1.2rem
+}
+
+.buttons :active {
+  background: var(--color-base-blue100);
+  transition: background-color 0.3s; 
+}
+
+section p{
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+
+  margin: 0 2.6rem
+}
+
+aside{
+  display: grid;
+  gap: 3.2rem;
+  margin: 3.4rem 2.6rem 4.0rem 2.6rem;
+}
+
+aside h1{
+  font-size: 2.4rem;
+}
+aside .card{
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;  
+}
+
+.card h2{
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+}
+
+.card p{
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  min-width: 21.7rem;
+}
+
+.card img{
+  width: 15.1rem;
+  height: 8.4rem;
+}
+
+footer{
+  display: flex;
+  min-width: 43rem;
+  height: 6.4rem;
+  padding: 1.6rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: #FFF;
+
+  text-align: center;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+
+  background-color: var(--color-base-blue100);
+}
+
+@media (min-width: 600px) {
+  html{
+    font-size: 62,5%;
+  }
+  
+  header form{
+    max-width: 108rem;
+    gap: 1.2rem;
+    justify-content: center;
+  }
+  
+  main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 4.4rem 0;
+    gap: 2.4rem;
+  }
+  
+  main section{
+    max-width: 80rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    margin: 0;
+  }
+
+  main aside{
+    display: flex;
+    max-width: 40rem;
+    flex-direction: column;
+    gap: 3.4rem;
+  }
+
+  main .title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  main p{
+    margin: 0;
+  }
+
+  main aside{
+    margin: 0;
+  }
+  
+  footer{
+    margin-bottom: 0rem;
+  }
+}
+
+
